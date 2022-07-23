@@ -12,7 +12,11 @@
     <h1>Hi, welcome 2 goonzu's blog!!</h1>
     {% for post in posts %}
     <hr />
-    <h2>{{post.title}}</h2>
+    <h2>
+        <a href="{{post.get_absolute_url}}">
+            {{post.title}}
+        </a>
+    </h2>
     <h4>{{post.created_at}}</h4>
     <p>{{post.content}}</p>
     {% endfor %}
